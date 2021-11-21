@@ -1,4 +1,4 @@
-# 3D ASCII donut JS
+# 3D ASCII Donut JS
 ## Description
 Displays a rotoating 3D donut using regular ASCII characters
 ## How to run the game
