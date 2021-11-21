@@ -8,9 +8,9 @@
 		<label for="innerRadius">r:</label> <input type="range" min="0" max="100" value="7" id="innerRadius">
 		<label for="outerCoverage">Outer coverage:</label> <input type="range" min="0.02" max="2" value="2" step="0.02" id="outerCoverage">
 		<label for="innerCoverage">Inner coverage:</label> <input type="range" min="0.02" max="2" value="2" step="0.02" id="innerCoverage">
-		<pre id="output" style="font-size: 7px;"></pre>
+		<pre id="output" style="font-size: 7px; font-weight: bolder;"></pre>
 		<script>
-			const gradient = ['.', ',', '*', '%', '%', '#', '@'];
+			const gradient = ['.', '"', '?', '%', '%', '#', '@'];
 			let R, r, size, zBuffer, maxAngle;
 
 			function refreshSizes() {
@@ -71,7 +71,7 @@
 					for (let x = 5; x < zBuffer[y].length - 5; ++x) {
 						if (zBuffer[y][x] > 0) {
 							let angleCoefficient = 2 * zBuffer[y][x] - zBuffer[y + 1][x] - zBuffer[y][x + 1];
-							angleCoefficient = size * angleCoefficient / 10;
+							angleCoefficient = size * angleCoefficient / 12;
 							angleCoefficient = Math.min(angleCoefficient, gradient.length - 1);
 							angleCoefficient = Math.max(angleCoefficient, 0);
 							angleCoefficient = Math.round(angleCoefficient);
